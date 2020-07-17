@@ -15,7 +15,8 @@ use Illuminate\Support\Facades\Route;
 
 //-----------------------------------------------
 //- Home
-Route::get('/', 'appController@index');
+Route::get('/', 'appController@index')
+->name('home');
 
 
 //-----------------------------------------------

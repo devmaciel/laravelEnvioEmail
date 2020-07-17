@@ -1,3 +1,3 @@
-<p><a href="{{ route('primeiro') }}"></a>Enviar Primeiro Email</p>
-<p><a href="{{ route('') }}"></a>Enviar Segundo Email</p>
-<p><a href="{{ route('') }}"></a>Enviar Terceiro Email</p>
+<p><a href="{{ route('primeiro') }}">Enviar Primeiro Email</a></p>
+<p><a href="">Enviar Segundo Email</a></p>
+<p><a href="">Enviar Terceiro Email</a></p>
