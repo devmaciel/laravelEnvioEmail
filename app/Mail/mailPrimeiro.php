@@ -1,25 +1,28 @@
 <?php
 
-namespace App\Mail;
+// Essa é um exemplo de classe que o professor mostra e utiliza a outra.
+//do app controller com método send.
 
-use Illuminate\Bus\Queueable;
-use Illuminate\Contracts\Queue\ShouldQueue;
-use Illuminate\Mail\Mailable;
-use Illuminate\Queue\SerializesModels;
+// namespace App\Mail;
 
-class mailPrimeiro extends Mailable
-{
-    use Queueable, SerializesModels;
+// use Illuminate\Bus\Queueable;
+// use Illuminate\Contracts\Queue\ShouldQueue;
+// use Illuminate\Mail\Mailable;
+// use Illuminate\Queue\SerializesModels;
 
-    //====================================================
-    public function __construct()
-    {
+// class mailPrimeiro extends Mailable
+// {
+//     use Queueable, SerializesModels;
 
-    }
+//     //====================================================
+//     public function __construct()
+//     {
 
-    //====================================================
-    public function build()
-    {
-        return $this->view('emails.primeiro');
-    }
-}
+//     }
+
+//     //====================================================
+//     public function build()
+//     {
+//         return $this->view('emails.primeiro');
+//     }
+// }
