@@ -30,6 +30,8 @@ class appController extends Controller
             $enderecos = ['emailenviotestehub@gmail.com'];
 
             $message->to($enderecos);
+            // $message->cc('jaotestephpmailer@gmail.com'); //carbon copy
+            $message->bcc('jaotestephpmailer@gmail.com'); //blind carbon copy
             $message->subject('Este é o assunto da mensagem');
 
         });
