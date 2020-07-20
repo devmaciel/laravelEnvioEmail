@@ -1,7 +1,6 @@
 {
     "files.exclude": {
         "bootstrap": true,
-        "storage": true,
         "tests": true,
         "vendor": true
     }

@@ -23,3 +23,6 @@ Route::get('/', 'appController@index')
 //- Emails
 Route::get('/primeiro', 'appController@enviarPrimeiroEmail')
 ->name('primeiro');
+
+Route::get('/segundo', 'appController@enviarSegundoEmail')
+->name('segundo');

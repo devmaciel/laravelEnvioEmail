@@ -3,26 +3,36 @@
 // Essa é um exemplo de classe que o professor mostra e utiliza a outra.
 //do app controller com método send.
 
-// namespace App\Mail;
+//segundo edit, é preciso utilizar pra fazer QUEUE
 
-// use Illuminate\Bus\Queueable;
-// use Illuminate\Contracts\Queue\ShouldQueue;
-// use Illuminate\Mail\Mailable;
-// use Illuminate\Queue\SerializesModels;
+namespace App\Mail;
 
-// class mailPrimeiro extends Mailable
-// {
-//     use Queueable, SerializesModels;
+use Illuminate\Bus\Queueable;
+use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Mail\Mailable;
+use Illuminate\Queue\SerializesModels;
 
-//     //====================================================
-//     public function __construct()
-//     {
+class mailPrimeiro extends Mailable
+{
+    use Queueable, SerializesModels;
 
-//     }
+    // public $user;
 
-//     //====================================================
-//     public function build()
-//     {
-//         return $this->view('emails.primeiro');
-//     }
-// }
+    //====================================================
+    public function __construct()
+    {
+        // $this->content = $user;
+    }
+
+    //====================================================
+    public function build()
+    {
+        // return $this->view('emails.primeiro');
+        return $this->view('emails.segundo')
+        ->attach(storage_path('app/docs/informacoes.txt'))
+        ->attach(storage_path('app/docs/tab_flowerdance.pdf', [
+                'as' => 'TAB Flower Dance',
+                'mime' => 'application/pdf'
+            ]));
+    }
+}
